@@ -40,6 +40,8 @@ The spider succeeded in crawling all the pages in one go! 😄
 
 However, the total number of items still stands at 20,931. I thought there may be duplicate journal names due to case insensitivity. Yet the final count in the *journal_abbreviations.csv* is identical with that read from database. 🤷‍♂️
 
+There are 20,914 entries remaining after 17 ones with `N/A` values being removed.
+
 ## To do list
 
 - [ ] Toggle case

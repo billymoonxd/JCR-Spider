@@ -171,13 +171,15 @@ class JCRCrawler(object):
 
     def _drop_duplicates(self):
         """
-        Drop duplicates in the CSV file and sort items by journal names.
+        Drop duplicates (and N/A, of course) in the CSV file and sort items by journal names.
         """
-        file = 'journal_abbreviations.csv'
-        pd.read_csv(file, delimiter=';', header=None)\
-            .drop_duplicates()\
-            .sort_values(by=0)\
-            .to_csv(file, sep=';', header=None, index=False)
+        file1 = 'journal_abbreviations.csv'
+        file2 = 'journal_abbreviations_jcr.csv'
+        pd.read_csv(file1, delimiter=';', header=None) \
+            .dropna() \
+            .drop_duplicates() \
+            .sort_values(by=0, key=lambda x: x.str.lower()) \
+            .to_csv(file2, sep=';', header=None, index=False)
 
     def crawl(self):
         """
