@@ -52,10 +52,11 @@ class JCRCrawler(object):
         Load user-agents from the given TXT file.
         """
         uas = []
-        with open(file, 'rb') as f:
+        with open(file, 'r') as f:
             for ua in f.readlines():
-                if ua:
-                    uas.append(ua.strip()[:-1])
+                strip = ua.strip()
+                if strip:
+                    uas.append(strip)
         random.shuffle(uas)
 
         return uas
@@ -155,6 +156,18 @@ class JCRCrawler(object):
         with open('journal_abbreviations.csv', 'a', newline='') as f:
             writer = csv.writer(f, delimiter=';')
             writer.writerows(result_list)
+
+    def _dump_db_to_csv(self):
+        """
+        Dump all the rows from DB to a CSV file (using semicolons as separators).
+        """
+        conn = pymysql.connect(host='localhost', user='root', password='root', database='jcr')
+        cur = conn.cursor()
+        cur.execute('SELECT name, isoAbbr FROM journal_info')
+        result_set = cur.fetchall()
+        with open('db.csv', 'w', newline='') as f:
+            writer = csv.writer(f, delimiter=';')
+            writer.writerows(result_set)
 
     def _drop_duplicates(self):
         """

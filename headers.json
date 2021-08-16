@@ -2,7 +2,7 @@
     "headers": {
         "content-type": "application/json;charset=UTF-8",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36",
-        "x-1p-inc-sid": "H1-bYjIZjOUFp144uXwaHL06qNPbk3nPrKC-18x2dd8u3A3Bor9wILyGpmx2Fh9wgx3Dx3D5T2Nx2B7uWWRxxs0oR2Em7hGgx3Dx3D-03Ff2gF3hTJGBPDScD1wSwx3Dx3D-cLUx2FoETAVeN3rTSMreq46gx3Dx3D"
+        "x-1p-inc-sid": "H1-0eZuWejjSW4Hw0u0Hi7eeux2FaYwrrKBx2Fl-18x2ddx2F1TIuhsDi56ZPQtUZbfUAx3Dx3DBSQO3qE537U881tx2Bghomagx3Dx3D-WwpRYkX4Gz8e7T4uNl5SUQx3Dx3D-wBEj1mx2B0mykql8H4kstFLwx3Dx3D"
     },
     "url1": "https://jcr.clarivate.com/api/jcr3/bwjournal/v1/search-result",
     "payload1": {
