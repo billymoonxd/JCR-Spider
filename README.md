@@ -4,7 +4,7 @@ Crawl journal ISO abbreviations from [JCR](https://jcr.clarivate.com/JCRLandingP
 
 The abbreviation list *journal_abbreviations.csv* can be used in place of JebRef's built-in list, which is not that satisfactory for me when generating journal ISO abbreviations.
 
-## Debug 
+## Debug
 
 It is required to set `x-1p-inc-sid` (authentication credentials) in the request header, otherwise you'll get [401 Unauthorized](https://httpstatuses.com/401).
 
@@ -47,4 +47,8 @@ There are 20,914 entries remaining after 17 ones with `N/A` values being removed
 - [ ] Toggle case
 
 The journal abbreviation list contains a huge number of upper case words that are supposed to be capitalized, as well as acronyms and initialisms. Next I will capitalize these words while keeping those acronyms and initialisms as they are.
+
+## Copyright
+
+© 2021 Clarivate. All rights rested with Clarivate.
 
